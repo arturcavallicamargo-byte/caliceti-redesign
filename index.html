@@ -6,8 +6,17 @@
     <meta name="theme-color" content="#f5f1e8" />
     <meta name="description" content="Caliceti di Bologna — tradição italiana em Curitiba desde 1970. Ristorante, Loja Gourmet, eventos e delivery." />
     <title>Caliceti di Bologna — Tradição italiana em Curitiba</title>
-    <script type="module" crossorigin src="/assets/index-DjxKQRJ8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Cg8HixPf.css">
+    <script>
+      (function(){
+        const originalSetAttribute = Element.prototype.setAttribute;
+        Element.prototype.setAttribute = function(name, value){
+          if (name === "src" && typeof value === "string" && value.startsWith("/images/")) value = "/caliceti-redesign" + value;
+          return originalSetAttribute.call(this, name, value);
+        };
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-DjxKQRJ8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cg8HixPf.css">
   </head>
   <body>
     <div id="root"></div>
